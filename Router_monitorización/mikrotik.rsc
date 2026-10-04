@@ -1,4 +1,4 @@
-# 2026-09-29 15:18:33 by RouterOS 7.24.2
+# 2026-10-02 14:13:05 by RouterOS 7.24.2
 # system id = S6ovkJXeX6E
 #
 /interface ethernet
@@ -12,6 +12,9 @@ set [ find default-name=ether7 ] disable-running-check=no
 set [ find default-name=ether8 ] disable-running-check=no
 set [ find default-name=ether9 ] disable-running-check=no
 set [ find default-name=ether10 ] disable-running-check=no
+/user group
+add name=backup policy="ssh,ftp,read,!local,!telnet,!reboot,!write,!policy,!te\
+    st,!winbox,!password,!web,!sniff,!sensitive,!api,!romon,!rest-api"
 /ip address
 add address=192.168.1.2/24 interface=ether2 network=192.168.1.0
 add address=192.168.122.2/24 interface=ether3 network=192.168.122.0

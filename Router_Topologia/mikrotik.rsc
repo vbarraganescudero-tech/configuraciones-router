@@ -1,4 +1,4 @@
-# 2026-09-29 16:35:36 by RouterOS 7.24.2
+# 2026-10-03 15:57:25 by RouterOS 7.24.2
 # system id = 4eSfx1U8E8E
 #
 /interface ethernet
@@ -18,6 +18,9 @@ add name=ospfvthree router-id=2.2.2.2 version=3
 /routing ospf area
 add instance=ospf-v4 name=area0-v4
 add instance=ospfvthree name=area0-v6
+/user group
+add name=backup policy="ssh,ftp,read,!local,!telnet,!reboot,!write,!policy,!te\
+    st,!winbox,!password,!web,!sniff,!sensitive,!api,!romon,!rest-api"
 /ip address
 add address=10.2.0.1/16 interface=ether3 network=10.2.0.0
 add address=10.255.255.2/30 interface=ether1 network=10.255.255.0
