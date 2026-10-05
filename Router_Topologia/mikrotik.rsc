@@ -25,7 +25,7 @@ add name=backup policy="ssh,ftp,read,!local,!telnet,!reboot,!write,!policy,!te\
 add address=10.2.0.1/16 interface=ether3 network=10.2.0.0
 add address=10.255.255.2/30 interface=ether1 network=10.255.255.0
 add address=10.255.255.5/30 interface=ether2 network=10.255.255.4
-add address=192.168.122.3/24 interface=ether10 network=192.168.122.0
+# add address=192.168.122.3/24 interface=ether10 network=192.168.122.0
 /ip dns
 set allow-remote-requests=yes servers=8.8.8.8,1.1.1.1
 /ip route
